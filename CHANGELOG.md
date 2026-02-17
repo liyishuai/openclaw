@@ -15,6 +15,7 @@ Docs: https://docs.openclaw.ai
 - Feishu/Docx tables + uploads: add `feishu_doc` actions for Docx table creation/cell writing (`create_table`, `write_table_cells`, `create_table_with_values`) and image/file uploads (`upload_image`, `upload_file`) with stricter create/upload error handling for missing `document_id` and placeholder cleanup failures. (#20304) Thanks @xuhao1.
 - Feishu/Reactions: add inbound `im.message.reaction.created_v1` handling, route verified reactions through synthetic inbound turns, and harden verification with timeout + fail-closed filtering so non-bot or unverified reactions are dropped. (#16716) Thanks @schumilin.
 - Memory/LanceDB: support custom OpenAI `baseUrl` and embedding dimensions for LanceDB memory. (#17874) Thanks @rish2jain and @vincentkoc.
+- Web Search: raise the maximum results limit (`MAX_SEARCH_COUNT`) from 10 to 20 to align with Brave Search's native pagination capacity, and update associated documentation and UI hints. (#19379) Thanks @liyishuai.
 
 ### Fixes
 
